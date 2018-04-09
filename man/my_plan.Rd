@@ -4,7 +4,7 @@
 \alias{my_plan}
 \title{Analysis Plan}
 \usage{
-my_plan()
+my_plan(given_number = 5)
 }
 \description{
 Analysis Plan
