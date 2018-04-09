@@ -28,3 +28,19 @@ make(my_plan())
 devtools::load_all()
 drake::make(my_plan())
 ```
+
+### Parallel use
+
+This package has been developed as an example of drake workflow as an R package, specifcally because of parallelism issues (see ropensci/drake#357).
+To launch the workflow in parallel you can use:
+
+``` r
+library("drake")
+make(my_plan(), jobs = 2, prework = 'library("drakepkgexample"))'
+```
+
+or:
+
+``` r
+drake::make(my_plan(), jobs = 2, prework = "devtools::load_all()")
+```
